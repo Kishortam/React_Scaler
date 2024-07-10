@@ -1,0 +1,70 @@
+Chapter 1 : 
+
+React:
+react is a JS library created for building fast and interactive user interface for web and mobile applications.
+its an open source, component-based, front-end library responsible only for the applications view layer.
+
+why react?
+1. improved performance => 1. use virtual dom 2. performance control
+2. easy creation of dynamic apps => 1. less code 2. more functionality
+3. reusable components => 1. build only once and reuse everywhere 2. less development time
+4. small learning curve => 1. easy to learn 2. uses fundamentals of HTML & JS
+5. build mobile and web apps => 1. write once using react & build it for web, android and iOS.
+6. great dubbing tooling => chrome extensions
+7. unidirectional data flow => 1. controlled data flow 2. easy to debug
+
+
+features : 
+1. JSX - javascript syntax extension
+2. virtual dom
+3. performance
+4. one - way data binding 
+5. extensions
+6. debugging
+
+
+
+
+
+files :
+1. readMe.md => it has all documentaton reagrding react. commands etc.
+2. package.json => all info, metadata, script
+3. package.lock.json =>  
+4. node module => dont psuh to github, delete it, for someone it might dont work on their computer. it can be downloaded using 'npm i', automatically download compatible to their computer. it default when we type npx start.
+
+
+you should render one parent node, and inside that parent node, put all your other child nodes to render. lets say <div>
+
+
+
+Class : 3
+=> Life Cycle : Mounting, Updating & unmounting
+=> component taking birth => componentDidMount
+=> component died  => componentDidUnmount
+=> updating => change in props, states it makes componentDidUpdate
+
+=> useEffect is a hook to use lifeCycle method
+
+Class : 5
+=> Routing means navigation between pages.
+=> Client side rendering (generating HTML)
+=> Server side rebdering 
+=> History API : 
+history.back(), history.push(), history.pushState()
+=> add react-router-dom as dependency
+
+Class : 8
+=> state can be passed to parent to child, not to siblings, cannot shared state with sibling.
+=> useContext
+
+Class : 9
+=> Redux is a state management library
+Steps :
+1. install redux toolkit & react-redux
+2. create store
+3. create slice - create reducer & create actions
+4. write functions inside reducer with buisness logic
+5. connect store with reducer
+6. wrap app with provider
+7. access state using useSelector
+8. dispatch actions using useDispatch

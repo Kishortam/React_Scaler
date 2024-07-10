@@ -1,0 +1,68 @@
+Topic 1 : React-1 (Introduction, Setup & the Concepts)
+=> Fundamentals of ReactJS
+=> Build a small React app
+=> Components
+=> State / Props  // not covered
+
+
+Topic 2 : React-2 (State & Props)
+=> State
+=> Props
+=> Counter App
+
+
+Topic 3 : React-3 (Components List & Forms)
+=> List Rendering
+=> Form
+=> React LifeCycle
+=> Hooks
+-----
+=> TODO App
+
+
+Topic 4 : React-4 IMDB Project - Part 1 (HTTP and useEffect)
+=> useEffect
+=> IMDB App
+=> HTTP
+=> Web Extension
+=> Synthetic Events
+----
+=> StopWatch App
+
+
+Topic 5 : IMDB Part-2 (Client side Routing and React Router)
+=> CSR vs SSR
+=> Routing
+=> Enhance IMDB app
+=> Add Movie Form
+
+Topic 6 : IMDB Part-3 (Pagination, Sorting, Searching, Filtering)
+=> Pagination
+=> useCallback
+=> useMemo
+=> useRef
+=> Watchlist
+=> Filter, Sorting  // not covered
+
+
+Topic 7 : IMDB Part-4 (Adding features to Watchlist)
+=> List all Favourites
+=> Search
+=> Sorting
+=> Filter
+=> Delete
+
+Topic 8 : React-8 : Prop Drilling & State Management
+=> State Management
+=> Prop Drilling
+=> Context API
+
+
+Topic 9 : React-9 : Asynchronous Redux & Thunk
+=> Introduction to Redux
+=> Counter using Redux
+
+
+Topic 10 : React-10 : Asynchronous Redux & Thunk-2
+=> IMDB App > Redux
+=> Cart App > Redux + Tailwind

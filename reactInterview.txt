@@ -1,0 +1,81 @@
+Hooks
+1. useState
+2. useEffect
+3. useContext
+4. useMemo
+5. useCallback
+6. useRef
+
+
+Higher Order Components
+=> what => why => when => how
+
+
+Lifecycle methods of Components / Class Components
+There are 3 Phases are : 
+1. mounting
+2. updating
+3. unmounting
+
+State Managenent
+1. State / Props
+2. Prop drilling
+3. Context
+
+
+Redux
+=> how => why => where 
+=> Redux ToolKit
+
+
+
+Custom Hooks
+=> When => why => how
+code for it => give some examples
+
+
+Lazy Loading
+1. code Splitting
+2. Chunking
+3. Suspense
+
+
+Virtual DOM
+=> Reconcillation
+=> React Fiber
+=> Render  => how it works
+=> Diffing Algorithm
+
+
+SSR vs CSR
+=> SEO 
+
+Routing (RBAC) role base access control
+1. React-Router
+2. how do you manage protected route
+3. Query Params
+4. Dynamic Routing
+
+
+Testing
+=> React Testing
+
+
+Async Tasks
+=> API Calls
+=> Events
+=> Promises
+
+
+Reusability / Modularity / Testability / Readability
+
+Performance
+
+for Style
+1.tailwind
+2. material ui 
+3. AntD
+4. Bootstrap
+
+
+Accessibility / Security

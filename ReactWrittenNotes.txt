@@ -1,0 +1,156 @@
+React
+
+imp : practice code from class react2,3,4
+
+
+React 1:
+1. Functional components => functional component in React, as it uses arrow function syntax to define the component. Functional components are JavaScript functions that return JSX elements.
+
+2. Render Method => The “render” method in a React component is responsible for rendering the JSX markup of the component. It determines what gets displayed on the screen when the component is rendered.
+
+3. componentDidMount => The “componentDidMount” lifecycle method is invoked immediately after a component is added to the DOM. It is commonly used to perform side effects, such as fetching data from an API or subscribing to events.
+
+4. useState => The “useState” hook is used in functional components to add state management capabilities. It allows components to store and update their own state without needing a class-based component. 
+
+=> The spread operator ({…props}) is used to pass all the properties of the “props” object as individual props to the component.
+
+=> The main entry point of a React application is typically the “index.js” file. It is the file where the React DOM is rendered into the HTML document.
+
+5. key => The “key” prop is used when rendering lists in React to assign a unique identifier to each item. It helps React efficiently update and re-render the list when its items change.
+
+=> React components can be defined either as classes (class-based components) or as functions (functional components). Both types of components have their uses and can be used interchangeably.
+
+6. ReactDOM.render => The “ReactDOM.render” method is used to render a React component into the DOM. It takes the component and the target DOM element as arguments and renders the component’s JSX markup onto the specified DOM element
+
+
+React 2: 
+code 1 => The component displays the current count value using the state variable count and updates it by calling the incrementCount function when the button is clicked.
+
+code 2 => The component renders an input field that updates the name state variable using the handleInputChange function. The entered name is then displayed in the greeting paragraph.
+
+code 4 => The component displays an unordered list based on the items state variable. Clicking the button triggers the addItem function, which adds a new item (‘New Item’) to the list.
+
+code 5 => The useEffect hook is used with an empty dependency array [], which means the effect runs only once when the component mounts. It fetches data from an API and logs the retrieved data to the console.
+
+code 6 => The component uses the useRef hook to create a ref named inputRef. The ref is attached to the input field using the ref attribute. When the form is submitted, the handleSubmit function logs the value of the input field to the console using the inputRef.current.value.
+
+code 7 => The component uses the useState hook to declare a state variable time and the useEffect hook with an empty dependency array []. It starts a timer that increments the time state value every second and returns a cleanup function to clear the timer when the component unmounts.
+
+code 8 => The component uses the useState hook to declare a state variable count and the useCallback hook to memoize the increment function. Clicking the button triggers the memoized increment function, which increments the count state value.
+
+code 9 => The component initially sets loading to true, indicating that data is being fetched. It displays the loading message “Loading…” until the data is fetched, at which point loading is set to false, and the fetched 
+
+code 10 => The component uses the useState hook to declare a state variable count and the useMemo hook to memoize the result of an expensive calculation. The memoized result value is updated whenever count changes. The component displays the current count value, the memoized result, and a button to increment the count.
+
+
+
+React 3 :
+code 1 => Since the fetchData function is asynchronous and returns a Promise, the result will be a Promise object, not the actual fetched data.
+
+code 2 => The fetchData function accepts a page parameter and fetches data from the API based on the provided page number. In this case, it fetches data from the API’s first page since page is set to 1.
+
+code 3 => While the data is being fetched, the component renders the message “Loading…” as indicated by the conditional rendering logic (data ? <p>Data loaded!</p> : <p>Loading...</p>).
+
+code 4 => While the data is being fetched, the component renders the message “Loading…” as indicated by the conditional rendering logic (data ? <p>Data loaded!</p> : <p>Loading...</p>).
+
+code 5 => By using useMemo with the sum calculation function and including [data] as the dependency array, it memoizes (caches) the result of the calculation. This avoids re-computing the sum unnecessarily when data hasn’t changed, improving performance.
+
+code 6 => In the useEffect hook, the inputRef.current.focus() statement is executed after the initial render. This focuses the input field since the inputRef is correctly assigned to the ref attribute of the input element.
+
+code 7 => The App component spreads the person object using the spread operator (...) and passes its properties (name and age) as props to the MyComponent component. The component then renders the name and age values as “John” and “25 years old”, respectively.
+
+code 8 => The MyComponent component receives an items prop, which is an array of products. It then maps over the items array, rendering a list item for each product. The resulting list will display “Product A”, “Product B”, and “Product C” as expected.
+
+code 9 => The MyComponent component initializes the data state with an empty array. In the useEffect hook, the fetchData function is called to fetch data from the provided URL. Once the data is received and parsed as JSON, it is stored in the data state. Then, the component renders an unordered list with each fetched item’s name as a list item
+
+code 10 => 
+When the “Focus Input” button is clicked, the handleButtonClick function is executed, which calls the focus method on the inputRef.current. This causes the input field to receive focus, allowing the user to interact with it immediately.
+
+
+
+React 4 :
+code 1 => The code renders the <App /> component into the DOM using ReactDOM.render(). The JSX expression <h1>Hello, React!</h1> is translated to the corresponding HTML element, and that element is appended to the element with the id “root” in the DOM.
+
+code 2 => The JSX code in the App component creates a virtual representation of the DOM structure. This virtual representation is called the Virtual DOM. It is an abstraction provided by React, allowing efficient updates and reconciliation with the actual (or real) DOM.
+
+code 3 => Reconciliation is the process by which React compares the Virtual DOM with the actual DOM and determines the minimal set of changes required to synchronize the two. It efficiently updates only the necessary parts, resulting in optimal performance.
+
+code 4 => When the “Increment” button is clicked, the handleClick function is executed. By using the functional form of setCount and passing a callback, we ensure that the prevCount value represents the previous state accurately. This prevents any issues related to stale closures. Each click of the button will increment the count by 1, leading to the displayed count being the number of times the button was clicked.
+
+code 5 => The App component directly renders the name and age variables in JSX, which will be evaluated and displayed as “John Doe” and “30 years old”, respectively.
+
+code 6 => The App component doubles each item in the items array using the map function and stores the result in the doubledItems array. Then, it renders an unordered list (<ul>) where each item in the doubledItems array is rendered as a list item (<li>). The rendered list will contain the doubled numbers: 2, 4, 6, 8, and 10.
+
+code 7 => The useEffect hook is used with an empty dependency array ([]), which means the effect callback is only executed once when the component mounts. In this case, it logs ‘Component mounted’ to the console when the App component is mounted for the first time.
+
+code 8 => The useCallback hook is used to create a memoized version of the handleClick function. By providing an empty dependency array ([]), the memoized function will remain the same throughout the component’s lifecycle. When the button is clicked, the memoized handleClick function is called, which logs ‘Button clicked’ to the console.
+
+code 9 => The useMemo hook is used to memoize the creation of the largeArray. The memoized value is only computed once when the component mounts (due to the empty dependency array []). The largeArray is an array of length 1000000, created using Array.from with the desired length and indices. The rendered output will display “Array length: 1000000”, indicating the length of the memoized largeArray.
+
+
+
+React 8 :
+code 1 => The ThemeContext.Provider component sets the value of the ThemeContext to “dark”. The Title component, using the useContext hook, accesses the current value of ThemeContext, which is “dark”. Therefore, the output will be “dark”.
+
+code 2 => The UserContext.Provider component sets the value of the UserContext to the user object, which has a name property set to “John”. The Title component, using the useContext hook, accesses the UserContext and retrieves the name property from the user object. Therefore, the output will be “John”.
+
+code 3 => The Title component tries to access the role property from the user object. However, the user object does not have a role property. In such cases, the operator is used to provide a default value. Since the role property does not exist, the default value “Guest” will be displayed.
+
+code 4 => The ThemeContext.Provider component does not have a value prop specified. In such cases, the default value provided during the createContext call is used. Therefore, the output will be “light”.
+
+code 5 => The UserContext.Provider component sets the value of the UserContext to “John”. The Title component, using the useContext hook, accesses the current value of UserContext, which is “John”. Therefore, the output will be “John”.
+
+code 6 => The UserContext.Consumer component provides a function as a child, which receives the current value of the UserContext as its argument. In this case, the value is “John”. The function then renders the h1 element with the received value, resulting in the output “John”.
+
+code 7 => The ThemeContext.Provider component sets the value of the ThemeContext to “dark”. The Title component tries to access the current value of ThemeContext using the useContext hook. Since the value is “dark”, it will be displayed. The
+
+code 8 => The Title component tries to access the age property from the user object, which is set as the value of the UserContext. The age property is set to 25, so the output will be 25.
+
+
+
+React - Redux 9:
+1. configureStore => Redux Toolkit provides the configureStore function, which simplifies the creation of a Redux store by automatically setting up various middleware and enhancers, such as Redux DevTools integration and thunk middleware.
+
+2. createSlice => The createSlice function from Redux Toolkit allows you to define a slice of the Redux state, including its initial state, reducer functions, and action creators, all in a concise and efficient manner.
+
+3. createAsyncThunk => Redux Toolkit provides the createAsyncThunk function, which simplifies the creation of async actions that involve asynchronous logic, such as API requests. It automatically generates pending, fulfilled, and rejected action types and corresponding action creators.
+
+4. createReducer => The createReducer function in Redux Toolkit allows you to define a reducer function using a simplified syntax, known as “builder callbacks.” It removes the need for switch statements and handles immutable updates automatically.
+
+5. createAction => The createAction function in Redux Toolkit allows you to define an action creator with a simplified syntax. It creates an action object with a type and a payload, if provided.
+
+6. combineReducers => Although combineReducers is not a Redux Toolkit-specific function, it is commonly used with Redux Toolkit to combine multiple reducer functions into a single reducer. It allows you to split your state and reducers into smaller, more manageable pieces.
+
+7. useSelector => The useSelector hook is provided by the react-redux library, which is commonly used with Redux Toolkit. It allows you to access the current Redux store state in your React components.
+
+8. useDispatch => The useDispatch hook, provided by the react-redux library, is used to access the dispatch function of the Redux store. It allows you to dispatch actions from your React components.
+
+9. createAsyncThunk => Although createAsyncThunk is primarily used to create async actions, it also generates action types automatically for pending, fulfilled, and rejected states. These action types can be used to handle different states of asynchronous operations.
+
+10. createAction => The createAction function can be used to generate action objects without payload. If you don’t need to attach any data to an action, you can use createAction to create simple action objects with just a type.
+
+
+React - redux 11:
+code 1 => The React.useState hook is used to manage state in functional components. It returns an array with the current state value and a function to update that value.
+
+code 2 => The useEffect hook is used to perform side effects in functional components. In this example, it updates the document title whenever the count state variable changes.
+
+code 3 => The useReducer hook is used for managing complex state transitions in functional components. It takes a reducer function and an initial state as arguments and returns the current state and a dispatch function to trigger state updates.
+
+code 4 => The useTransition hook is used to optimize concurrent updates in React. It delays the rendering of some components while updates are in progress, which can lead to a better user experience.
+
+code 5 => The useSelector hook is used to select a specific piece of state from the Redux store. In this example, it selects the count value from the Redux store, which is then displayed in the component.
+
+code 6 => The dispatch function is used to update the state in the Redux store by dispatching actions. In this example, it dispatches the incrementAsync action, which increments the count value asynchronously.
+
+code 7 => The dispatch function is used to update the Redux store with a new state. In this example, it dispatches the increment action, which increments the count value in the Redux store.
+
+code 8 => he updateUser action is dispatched to update the user’s name and age in the Redux store. In this example, it dispatches the action with an object containing the new name and age values
+
+code 9 => The selectPostsByUser selector filters and selects posts from the Redux store based on the user ID. It allows displaying only the posts associated with a specific user.
+
+code 10 => The selectIsLoggedIn selector selects the user’s login status from the Redux store. It allows conditional rendering based on whether the user is logged in or not.
+
+
+
+React-redux

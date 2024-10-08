@@ -6,16 +6,16 @@ function pageThree() {
     const [itemsPerPage, setItemsPerPage] = useState(10);
 
     useEffect(()=>{
-        fetch(`http://example.com/api/data?page=${currentPage}&limit=${itemsPerPage}`)
-        .then(res => res.json())
-        .then(data => setData(data))
-        .catch(err => console.log(err));
-    },[currentPage, itemsPerPage])
+        fetch(`https://www.data.com/api/data?page=${currentpage}&limit=${itemsPerPage}`)
+        .then((res)=> res.json())
+        .then((data)=> setData(data))
+        .catch((error)=> console.log(error))
+    }, [currentPage, itemsPerPage])
 
-    const totalPages = Math.ceil(data.length / itemsPerPage)
-    const startIndex = (currentPage -1 )* itemsPerPage;
+    const totalPages = Math.ceil(data.length / itemsPerPage);
+    const startIndex = (currentPage - 1)*itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
-    const currentItems = data.slice(startIndex, endIndex);
+    const currentItems = data.slice(startIndex, endIndex)
 
 
   return (

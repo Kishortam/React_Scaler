@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react'
-import Counter from './assets/Counter';
-import CounterIncDec from './assets/CounterIncDec';
+// import Counter from './assets/Counter';
+// import CounterIncDec from './assets/CounterIncDec';
+
 
 function App() {
+  
   /*
   const [data, setData] = useState([]); // initialized state for a data
 
@@ -34,8 +36,8 @@ function App() {
     })} */}
 
     {/* <Counter/> */}
-    <CounterIncDec/>
-    
+    {/* <CounterIncDec/> */}
+  
     </>
   )
 }
